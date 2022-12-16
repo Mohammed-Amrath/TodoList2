@@ -10,7 +10,7 @@ export function Sidebar(props) {
         onClick={() => props.setTodoId(todo.id)}
       >
         <h3>
-          Todo {index + 1}&nbsp;
+          {todo.body.split("\n")[0]}&nbsp;
           <button
             onClick={(event) => props.delete(event, todo.id)}
             id="delete-btn"
@@ -21,6 +21,7 @@ export function Sidebar(props) {
             Finished
           </button>
         </h3>
+        <h4>{todo.body.split("\n")[1]}</h4>
       </div>
     </div>
   ));

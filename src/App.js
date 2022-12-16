@@ -25,7 +25,7 @@ export default function App() {
   function createTodo() {
     const newTodo = {
       id: nanoid(), //javascript function to create ids for props
-      body: "#Title"
+      body: "#Title \n description of todo"
     };
     setTodo((prevTodo) => [newTodo, ...prevTodo]);
     setTodoId(newTodo.id);
